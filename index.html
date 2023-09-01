@@ -63,35 +63,35 @@
   
 </style>
     </div>
-
 <style>
     body {
-        cursor: none; /* Hide the default cursor */
+        cursor: none; 
     }
 
-    /* Create the cursor */
     #cursor {
         width: 10px;
         height: 10px;
         position: fixed;
         border-radius: 50%;
-        background-color: #330033; /* Super dark purple color */
-        pointer-events: none; /* Ensure the cursor doesn't interfere with other elements */
-        z-index: 9999; /* Make sure it's on top of everything */
+        background-color: #330033; 
+        pointer-events: none; 
+        z-index: 9999; 
+    }
+
+    a, button {
+        cursor: pointer;
     }
 </style>
 
 <div id="cursor"></div>
 
 <script>
-    // JavaScript to update the cursor position
     document.addEventListener("mousemove", function(event) {
         var cursor = document.getElementById("cursor");
-        cursor.style.left = (event.clientX - 5) + "px"; // Adjust for cursor size
-        cursor.style.top = (event.clientY - 5) + "px"; // Adjust for cursor size
+        cursor.style.left = (event.clientX - 5) + "px";
+        cursor.style.top = (event.clientY - 5) + "px"; 
     });
 </script>
-
     
     <script>
         let stars = document.getElementById('stars');

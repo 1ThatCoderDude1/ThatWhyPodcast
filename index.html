@@ -163,5 +163,49 @@
             header.style.top = value * 0.5 + 'px';
         })
     </script>
+<style>
+    .popup {
+        display: none;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: #301934; /* Adjust the background color as needed */
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .popup-content {
+        text-align: center;
+        padding: 20px;
+    }
+
+    #audio-player {
+        width: 100%;
+    }
+</style>
+<div id="popup" class="popup">
+    <div class="popup-content">
+        <audio controls id="audio-player">
+            <source src="your-audio.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+</div>
+
+<script>
+    const tuneInLink = document.querySelector('.a');
+    const popup = document.getElementById('popup');
+
+    tuneInLink.addEventListener('click', function (e) {
+        e.preventDefault(); 
+        popup.style.display = 'block';
+    });
+
+    document.addEventListener('click', function (e) {
+        if (!popup.contains(e.target) && e.target !== tuneInLink) {
+            popup.style.display = 'none';
+        }
+    });
+</script>
   </body>
 </html>

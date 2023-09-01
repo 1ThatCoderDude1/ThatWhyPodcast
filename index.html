@@ -20,7 +20,63 @@
     <header>
       <a href="#" class="logo">Why?</a>
       <ul>
-        <li><a href="#">Home</a></li>
+        <a href="#" id="style-2" class="ad" data-replace="this link"><span>Why?</span></a>
+        <style>
+  .ad {
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+}
+
+.ad::before,
+.ad::after {
+ content: '';
+  position: absolute;
+  width: 100%;
+  left: 0;
+}
+.ad::before {
+  background-color: #54b3d6;
+  height: 2px;
+  bottom: 0;
+  transform-origin: 100% 50%;
+  transform: scaleX(0);
+  transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+}
+.ad::after {
+  content: attr(data-replace);
+  height: 100%;
+  top: 0;
+  transform-origin: 100% 50%;
+  transform: translate3d(200%, 0, 0);
+  transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+  color: #54b3d6;
+}
+
+.ad:hover::before {
+  transform-origin: 0% 50%;
+  transform: scaleX(1);
+}
+.ad:hover::after {
+  transform: translate3d(0, 0, 0);
+}
+
+.ad span {
+  display: inline-block;
+  transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.ad:hover span {
+  transform: translate3d(-200%, 0, 0);
+}
+          
+.ad {
+  text-decoration: none;
+  color: #18272F;
+  font-weight: 700;
+  vertical-align: top;
+}
+          </style>
         <li><a href="#podcast">Listen</a></li>
       </ul>
     </header>
@@ -34,11 +90,6 @@
     </section>
     <div class="sec" id="sec">
         <h2 id="podcast">'Why' Podcast...</h2>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
       <div class="content-box">
   <h2>Society</h2>
   <p>This Podcast is based around smaller classes falling into the broader terms of society</p>
@@ -46,10 +97,10 @@
 
 <style>
   .content-box {
-    width: 200px; /* Adjust the width as needed */
-    height: 300px; /* Adjust the height to make it a vertical rectangle */
+    width: 400px;
+    height: 600px;
     padding: 20px;
-    background-color: #fff;
+    background-color: #301934;
     border-radius: 5px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
     margin: 20px;

@@ -14,11 +14,13 @@
     />
     <link rel="stylesheet" href="./style.css" />
     <title>The Why? Podcast</title>
+     <link rel="icon" href="Logo.webp">
      <link href="Logo.webp">
   </head>
   <body>
-    <a href="#" class="logo">Why?</a>
-    <ul>
+    <header>
+      <a href="#" class="logo">Why?</a>
+      <ul>
         <li><a href="#">Home</a></li>
         <li><a href="#podcast">Listen</a></li>
       </ul>
@@ -33,6 +35,11 @@
     </section>
     <div class="sec" id="sec">
         <h2 id="podcast">'Why' Podcast...</h2>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
       <div class="content-box">
   <h2>Society</h2>
   <p>This Podcast is based around smaller classes falling into the broader terms of society</p>
@@ -40,10 +47,10 @@
 
 <style>
   .content-box {
-    width: 400px;
-    height: 600px;
+    width: 200px; /* Adjust the width as needed */
+    height: 300px; /* Adjust the height to make it a vertical rectangle */
     padding: 20px;
-    background-color: #301934;
+    background-color: #fff;
     border-radius: 5px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
     margin: 20px;
@@ -63,7 +70,6 @@
         let btn = document.getElementById('btn');
         let mountains_front = document.getElementById('mountains_front');
         let header = document.querySelector('header');
-
         window.addEventListener('scroll', function(){
             let value = window.scrollY;
             stars.style.left = value * 0.25 + 'px';

@@ -63,58 +63,36 @@
   
 </style>
     </div>
-    <style>
+
+<style>
     body {
         cursor: none; /* Hide the default cursor */
     }
 
-    /* Create the cursor container */
+    /* Create the cursor */
     #cursor {
-        width: 16px;
-        height: 16px;
+        width: 10px;
+        height: 10px;
         position: fixed;
         border-radius: 50%;
-        background-color: transparent;
+        background-color: #330033; /* Super dark purple color */
         pointer-events: none; /* Ensure the cursor doesn't interfere with other elements */
         z-index: 9999; /* Make sure it's on top of everything */
     }
-
-    /* Create the expanding circle */
-    #cursor .circle-expand {
-        animation: expandShrink 1s infinite alternate;
-        background-color: #ff5722; /* You can change the color */
-    }
-
-    /* Create the shrinking circle */
-    #cursor .circle-shrink {
-        animation: expandShrink 1s infinite alternate-reverse;
-        background-color: #2196F3; /* You can change the color */
-    }
-
-    /* Define the animation */
-    @keyframes expandShrink {
-        0% {
-            transform: scale(1);
-        }
-        100% {
-            transform: scale(1.2);
-        }
-    }
 </style>
 
-<div id="cursor">
-    <div class="circle-expand"></div>
-    <div class="circle-shrink"></div>
-</div>
+<div id="cursor"></div>
 
 <script>
     // JavaScript to update the cursor position
     document.addEventListener("mousemove", function(event) {
         var cursor = document.getElementById("cursor");
-        cursor.style.left = (event.clientX - 8) + "px"; // Adjust for cursor size
-        cursor.style.top = (event.clientY - 8) + "px"; // Adjust for cursor size
+        cursor.style.left = (event.clientX - 5) + "px"; // Adjust for cursor size
+        cursor.style.top = (event.clientY - 5) + "px"; // Adjust for cursor size
     });
 </script>
+
+    
     <script>
         let stars = document.getElementById('stars');
         let moon = document.getElementById('moon');

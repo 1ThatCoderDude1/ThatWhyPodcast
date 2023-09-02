@@ -13,8 +13,8 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./style.css" />
-    <title>The 'Why?' Podcast</title>
-    <link rel="icon" type="image/x-icon" href="Screenshot 2023-09-02 11.21.15 AM.png">
+    <title>The'Why?'Podcast</title>
+     <link rel="icon" type="image/x-icon" href="Screenshot 2023-09-02 11.21.15 AM.png">
   </head>
   <body>
     <header>
@@ -25,46 +25,174 @@
       </ul>
     </header>
     <section>
-      <img src="stars.png" id="stars">
-      <img src="moon.png" id="moon">
-      <img src="mountains_behind.png" id="mountains_behind">
-      <h2 id="text">Austin - Emerson</h2>
-      <a href="#podcast" id="btn">Listen</a>
-      <img src="mountains_front.png" id="mountains_front">
+        <img src="stars.png" id="stars">
+        <img src="moon.png" id="moon">
+        <img src="mountains_behind.png" id="mountains_behind">
+        <h2 id="text">Austin - Emerson</h2>
+        <a href="#podcast" id="btn">Listen</a>
+        <img src="mountains_front.png" id="mountains_front">
     </section>
     <div class="sec" id="sec">
-      <h2 id="podcast">'Why' Podcast...</h2>
-      <!-- Your existing content for the podcast section -->
+        <h2 id="podcast">'Why' Podcast...</h2>
+      <p>Here there will be all of the listed podcasts done by the 'Why Podcast' corperation.</p>
+      <p>Here there will be all of the listed podcasts done by the 'Why Podcast' corperation.</p>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <div class="content-box">
+  <h2>Society</h2>
+        <br></br>
+  <p>This Podcast is based around smaller classes falling into the broader terms of society. This Podcast will discuss the more specified sectors of society such as 'Why does our society look the way it does today' from an acedemic perspective and 'Controversy in modern day society' with a fun twist.</p>
+        <br></br>
+        <br></br>
+        <br></br>
+    <a href="Emerson_2.mp3" class="a">Tune In Here</a>
+        <br></br>
+        <a class="b" href="Emerson_2.mp3" download>or download here</a>
+        <style>
+    .a {
+  box-shadow: inset 0 0 0 0 #54b3d6;
+  color: #54b3d6;
+  padding: 0 .25rem;
+  margin: 0 -.25rem;
+  transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+.a:hover {
+  color: #fff;
+  box-shadow: inset 200px 0 0 0 #54b3d6;;
+}
+.a {
+  color: #54b3d6;
+  font-family: 'Poppins', sans-serif;
+  font-size: 27px;
+  font-weight: 700;
+  line-height: 1.5;
+  text-decoration: none;
+}
+.b {
+  box-shadow: inset 0 0 0 0 #54b3d6;
+  color: #54b3d6;
+  padding: 0 .25rem;
+  margin: 0 -.25rem;
+  transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+          
+.b:hover {
+  color: #fff;
+  box-shadow: inset 200px 0 0 0 #54b3d6;;
+}
+.b {
+  color: #54b3d6;
+  font-family: 'Poppins', sans-serif;
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 1.5;
+  text-decoration: none;
+}
+          </style>
+</div>
+<style>
+  .content-box {
+    width: 400px; /* Adjust the width as needed */
+    height: 600px; /* Adjust the height to make it a vertical rectangle */
+    padding: 20px;
+    background-color: #301934;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    margin: 20px;
+    transition: transform 0.3s ease-in-out;
+  }
+  .content-box:hover {
+    transform: scale(1.1);
+  }
+  
+</style>
     </div>
+<style>
+    body {
+        cursor: none; 
+    }
+    #cursor {
+        width: 10px;
+        height: 10px;
+        position: fixed;
+        border-radius: 50%;
+        background-color: #000000; 
+        pointer-events: none; 
+        z-index: 9999; 
+    }
+    a, button {
+        cursor: pointer;
+    }
+</style>
+<div id="cursor"></div>
+<script>
+    document.addEventListener("mousemove", function(event) {
+        var cursor = document.getElementById("cursor");
+        cursor.style.left = (event.clientX - 5) + "px";
+        cursor.style.top = (event.clientY - 5) + "px"; 
+    });
+</script>
     
-    <!-- CSS window at the bottom -->
-    <div class="css-window">
-      <div class="css-content">
-        <p>This is the CSS window content.</p>
-      </div>
-    </div>
-    
-    <!-- Your existing scripts for animations and popups -->
-    
-    <style>
-      /* Existing styles */
-
-      .css-window {
+    <script>
+        let stars = document.getElementById('stars');
+        let moon = document.getElementById('moon');
+        let mountains_behind = document.getElementById('mountains_behind');
+        let text = document.getElementById('text');
+        let btn = document.getElementById('btn');
+        let mountains_front = document.getElementById('mountains_front');
+        let header = document.querySelector('header');
+        window.addEventListener('scroll', function(){
+            let value = window.scrollY;
+            stars.style.left = value * 0.25 + 'px';
+            moon.style.top = value * 1.05 + 'px';
+            mountains_behind.style.top = value * 0.5 + 'px';
+            mountains_front.style.top = value * 0 + 'px';
+            text.style.marginRight = value * 4 + 'px';
+            text.style.marginTop = value * 1.5 + 'px';
+            btn.style.marginTop = value * 1.5 + 'px';
+            header.style.top = value * 0.5 + 'px';
+        })
+    </script>
+<style>
+    .popup {
+        display: none;
         position: fixed;
         bottom: 0;
         left: 0;
         width: 100%;
-        background-color: #000; /* Background color for the CSS window */
-        color: #fff; /* Text color */
-        padding: 20px;
+        background-color: #301934; /* Adjust the background color as needed */
+        transition: transform 0.3s ease-in-out;
+    }
+    .popup-content {
         text-align: center;
-        z-index: 999;
-      }
-
-      .css-content {
-        max-width: 1200px; /* Max width for content */
-        margin: 0 auto; /* Center content horizontally */
-      }
-    </style>
+        padding: 20px;
+    }
+    #audio-player {
+        width: 100%;
+    }
+</style>
+<div id="popup" class="popup">
+    <div class="popup-content">
+        <audio controls id="audio-player">
+            <source src="Emerson_2.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+</div>
+<script>
+    const tuneInLink = document.querySelector('.a');
+    const popup = document.getElementById('popup');
+    tuneInLink.addEventListener('click', function (e) {
+        e.preventDefault(); 
+        popup.style.display = 'block';
+    });
+    document.addEventListener('click', function (e) {
+        if (!popup.contains(e.target) && e.target !== tuneInLink) {
+            popup.style.display = 'none';
+        }
+    });
+</script>
   </body>
 </html>

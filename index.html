@@ -232,24 +232,24 @@
         width: 100%;
     }
 </style>
-    <div id="popup-1" class="popup-1">
-    <div class="popup-content-1">
-        <audio controls id="audio-player-1">
+    <div id="timedpopup" class="timedpopup">
+    <div class="timedpopup-content">
+        <audio controls id="timedaudio-player">
             <source src="Emerson_3 (1).mp3#t=1245" type="audio/mp3">
             Your browser does not support the audio element.
         </audio>
     </div>
 </div>
     <script>
-    const tuneInLink = document.querySelector('.c');
-    const popup = document.getElementById('popup-1');
-    tuneInLink.addEventListener('click', function (e) {
+    const timedtuneInLink = document.querySelector('.c');
+    const timedpopup = document.getElementById('timedpopup');
+    timedtuneInLink.addEventListener('click', function (e) {
         e.preventDefault(); 
-        popup.style.display = 'block';
+        timedpopup.style.display = 'block';
     });
     document.addEventListener('click', function (e) {
-        if (!popup.contains(e.target) && e.target !== tuneInLink) {
-            popup.style.display = 'none';
+        if (!timedpopup.contains(e.target) && e.target !== timedtuneInLink) {
+            timedpopup.style.display = 'none';
         }
     });
 </script>

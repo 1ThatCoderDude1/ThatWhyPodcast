@@ -46,7 +46,7 @@
      <br></br>
         <a href="Emerson_3 (1).mp3" class="a">Tune In Here</a>
            <br></br>
-        <a href="Emerson_3 (1).mp3#t=1245" class="c">,see the 2nd half here</a>
+        <a href="Emerson_3 (1).mp3#t=1245" class="c">,see the second half here</a>
         <br></br>
         <a class="b" href="Emerson_3 (1).mp3" download>or download here</a>
         <style>
@@ -89,7 +89,6 @@
   line-height: 1.5;
   text-decoration: none;
 }
-
 .c{
   box-shadow: inset 0 0 0 0 #54b3d6;
   color: #54b3d6;
@@ -97,7 +96,6 @@
   margin: 0 -.25rem;
   transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
 }
-
 .c:hover {
   color: #fff;
   box-shadow: inset 200px 0 0 0 #54b3d6;;
@@ -114,8 +112,8 @@
 </div>
 <style>
   .content-box {
-    width: 400px; /* Adjust the width as needed */
-    height: 600px; /* Adjust the height to make it a vertical rectangle */
+    width: 400px;
+    height: 600px; 
     padding: 20px;
     background-color: #301934;
     border-radius: 5px;
@@ -182,7 +180,7 @@
         bottom: 0;
         left: 0;
         width: 100%;
-        background-color: #301934;
+        background-color: #301934; /* Adjust the background color as needed */
         transition: transform 0.3s ease-in-out;
     }
     .popup-content {
@@ -211,45 +209,6 @@
     document.addEventListener('click', function (e) {
         if (!popup.contains(e.target) && e.target !== tuneInLink) {
             popup.style.display = 'none';
-        }
-    });
-</script>
-    <style>
-    .popup-1 {
-        display: none;
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        background-color: #301934;
-        transition: transform 0.3s ease-in-out;
-    }
-    .popup-content-1 {
-        text-align: center;
-        padding: 20px;
-    }
-    #audio-player-1 {
-        width: 100%;
-    }
-</style>
-    <div id="timedpopup" class="timedpopup">
-    <div class="timedpopup-content">
-        <audio controls id="timedaudio-player">
-            <source src="Emerson_3 (1).mp3" type="audio/mp3">
-            Your browser does not support the audio element.
-        </audio>
-    </div>
-</div>
-    <script>
-    const timedtuneInLink = document.querySelector('.c');
-    const timedpopup = document.getElementById('timedpopup');
-    timedtuneInLink.addEventListener('click', function (e) {
-        e.preventDefault(); 
-        timedpopup.style.display = 'block';
-    });
-    document.addEventListener('click', function (e) {
-        if (!timedpopup.contains(e.target) && e.target !== timedtuneInLink) {
-            timedpopup.style.display = 'none';
         }
     });
 </script>
